@@ -21,6 +21,6 @@ git commit -m 'deploy'
 # git push -f git@github.com:williamshuo3/williamshuo3.github.io.git main
 
 # 如果你要部署在 https://williamshuo3.github.io/vite-work
-git push -f git@github.com:williamshuo3/vite-work.git master:gh-pages
+git push -f git@github.com:williamshuo3/vite-work.git main:gh-pages
 
 cd -
