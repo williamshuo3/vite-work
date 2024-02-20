@@ -1,15 +1,18 @@
 #!/usr/bin/env sh
 
-# 发生错误时终止
+# abort on errors
 set -e
 
-# 构建
+# build
 npm run build
 
-# 进入构建文件夹
+# navigate into the build output directory
 cd dist
+
+# place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
-# 如果你要部署到自定义域名
+
+# if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
 git init
