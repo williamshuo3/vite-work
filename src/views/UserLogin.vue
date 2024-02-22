@@ -29,7 +29,7 @@
         </div>
 </template>
 <script>
-import axios from 'axios';
+// import axios from 'axios';
 
 const {VITE_API} = import.meta.env
 export default{
@@ -44,7 +44,7 @@ export default{
     methods: {
       login(){
         const api = `${VITE_API}admin/signin`;
-        axios.post(api,this.user)
+        this.$http.post(api,this.user)
         .then((res) =>{
             const {token , expired} = res.data;
             document.cookie = `hexToken=${token};expires=${new Date(expired)};`

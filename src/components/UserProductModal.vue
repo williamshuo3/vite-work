@@ -81,7 +81,6 @@
       return {
         status: {},
         modal: '',
-        qty: 1,
       };
     },
     mounted() {

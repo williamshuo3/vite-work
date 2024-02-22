@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>This is 產品列表頁面</h1>
+    <h1>產品列表頁面</h1>
     <table class="table align-middle">
       <thead>
         <tr>
@@ -67,7 +67,6 @@ export default{
         this.$http.get(url)
         .then((res)=>{
           this.products = res.data.products
-          console.log('以典籍')
         })
         .catch((err)=>{
           alert(err.data.message)
@@ -83,11 +82,7 @@ export default{
         .catch((err) => {
           alert(err.response.data.message);
         });
-    },
-      // 查看細節
-      // openProduct(item){
-      //   this.tempProduct = item
-      // }
+        },
       },
       mounted() {
         this.getData()
